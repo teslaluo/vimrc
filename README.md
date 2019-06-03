@@ -2,7 +2,7 @@
 我的个人vimrc，用着很顺手
 
 vimrc: 就是.vimrc文件，一般放到~/.vimrc中
-plugins.zip: vimrc文件中配置的三个插件(NERDTree/taglist/BufExplorer)打包，创建~/.vim目录，在~/.vim目录下执行unzip plugins.zip即可。
+plugins.tar.gz: vimrc文件中配置的三个插件(NERDTree/taglist/BufExplorer)打包，创建~/.vim目录，在~/.vim目录下执行tar -xf plugins.tar.gz即可。
 
 特性：
 
