@@ -24,7 +24,7 @@ filetype indent on
 set autoread
 
 "带有如下符号的单词不要被换行分割"
-set iskeyword+=_,$,@,%,#,-
+set iskeyword+=_,$
 
 "通过使用: commands命令，告诉我们文件的哪一行被改变过"
 set report=0
