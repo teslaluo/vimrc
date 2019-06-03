@@ -1,19 +1,75 @@
+"=============通用设置===============
 "识别文件编码
 set fencs=ucs-bom,utf-8,cp936
 
 "统一转成utf-8
 set fenc=utf-8
+set enc=utf-8
 
+"关闭vi兼容模式"
+set nocompatible
+"
+""设置历史记录步数"
+set history=1000
+
+"开启相关插件"
+""侦测文件类型"
+filetype on
+"载入文件类型插件"
+filetype plugin on
+""为特定文件类型载入相关缩进文件"
+filetype indent on
+
+"当文件在外部被修改时，自动更新该文件"
+set autoread
+
+"带有如下符号的单词不要被换行分割"
+set iskeyword+=_,$,@,%,#,-
+
+"通过使用: commands命令，告诉我们文件的哪一行被改变过"
+set report=0
+ 
 set tw=300
 
+"==============编辑设置=================
+"使用空格来替换Tab"
+set expandtab
+
+""设置所有的Tab和缩进为4个空格"
+set tabstop=4
+
+"设定<<和>>命令移动时的宽度为4"
+set shiftwidth=4
+
+""使得按退格键时可以一次删除4个空格"
+set softtabstop=4
+set smarttab
+
+"缩进，自动缩进（继承前一行的缩进）"
+""set autoindent 命令打开自动缩进，是下面配置的缩写
+"可使用autoindent命令的简写，即“:set ai”和“:set noai”
+""还可以使用“:set ai sw=4”在一个命令中打开缩进并设置缩进级别
+set ai
+set cindent
+
+"智能缩进
+set si
+
+"设置软宽度
+set sw=4
+
+
+"搜索逐字符高亮"
+set hlsearch
+set incsearch
+
+
+"=============其他设置================
 "tags文件搜素
 set tags=tags;
 "增加一些基础库的tag文件，根据需要来修改
 set tags+=/data/code/protocol/src/tags
-set tags+=/data/code/flinter/flinter/tags
-set tags+=/data/code/tinder/tinder/tags
-set tags+=/data/code/torcher/torcher/tags
-set tags+=/data/code/thirdparty/tags
+set tags+=/data/code/libc/include/tags
 
 "color evening
 
@@ -43,8 +99,6 @@ map <C-k> 20k
 "ctag跳转
 nmap fj g]
 nmap ff <C-T>
-
-
 
 
 fun! ToggleFold()
@@ -83,13 +137,13 @@ au BufReadPost *.h,*.hh,*.c,*.ec,*.cpp,*.hpp,*.ecpp,*.pc,*.go set foldenable
 
 
 
-"-------------------------------------------taglist.vim---------------------->>
+"=================taglist.vim======================
 noremap <F11> :TlistToggle<CR>
 let Tlist_Show_One_File = 1     
 let Tlist_Exit_OnlyWindow = 1  "剩下taglist窗口时退出vim 
 let Tlist_Use_Right_Window = 1  "使用右端窗口
 
-"-------------------------------------------NERD_tree.vim-------------------->>
+"==================NERD_tree.vim====================
 "设置快捷键"
 noremap <F2> :NERDTreeToggle<cr> 
 
@@ -110,5 +164,5 @@ let NERDTreeCaseSensitiveSort=0
 "高亮NERDTrre窗口的当前行"
 let NERDTreeHighlightCursorline=1
 
-"-------------------------------------------BufExplorer.vim------------------>>
+"=================BufExplorer.vim===================
 noremap zz :BufExplorer<CR>
