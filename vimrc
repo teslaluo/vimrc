@@ -8,7 +8,10 @@ set enc=utf-8
 
 "关闭vi兼容模式"
 set nocompatible
-"
+
+" 支持高亮
+syntax on
+
 ""设置历史记录步数"
 set history=1000
 
@@ -63,6 +66,8 @@ set sw=4
 set hlsearch
 set incsearch
 
+"支持退格
+set backspace=indent,eol,start
 
 "=============其他设置================
 "tags文件搜素
