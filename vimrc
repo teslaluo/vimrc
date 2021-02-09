@@ -78,7 +78,7 @@ set tags+=/data/code/libc/include/tags
 
 "color evening
 
-hi Folded   term=standout       ctermbg=DarkGrey       ctermfg=DarkBlue        guibg=LightGrey     guifg=DarkBlue
+hi Folded   term=standout       ctermbg=DarkGrey       ctermfg=green        guibg=LightGrey     guifg=green
 
 "记住上次打开的位置
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
